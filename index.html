@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Glass Booking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+ <header class="site-header">
+    <span class="wordmark">Green Glass Booking</span>
+    <button class="bio-toggle" id="bioToggle" aria-expanded="false" aria-controls="gg-info">
+        <span class="bio-toggle-icon">+</span>
+    </button>
+</header>
+
+    <main>
+        <section class="gg-info open" id="gg-info">
+            <article class="gg-card">
+                <div class="gg-bio">
+                    <p>
+                       Showcasing independent artists on international stages. 
+                    </p>
+
+                    <p>For booking &amp; inquiries: <a href="mailto:greenglassbooking@gmail.com">greenglassbooking@gmail.com</a></p>
+
+                </div>
+            </article>
+        </section>
+        <section class="artists">
+            <h2 class="section-label">Artists</h2>
+
+            <article class="artist-card">
+                <img src="MATTLIVEFULL.jpeg" alt="Matt Storm performing live" class="artist-photo">
+                <div class="artist-bio">
+                    <h3>Matt Storm</h3>
+                    <p class="tagline">alt-soul &nbsp;·&nbsp; jazz &nbsp;·&nbsp; folk</p>
+
+                    <p>
+                        Vancouver-based alt-soul artist Matt Storm is known for his emotionally rich live performances, blending soul, jazz, and folk with a modern edge. Raised across the globe and now rooted on Canada's West Coast, Matt found refuge in music from an early age — a passion that shaped his sound and storytelling.
+                    </p>
+                    <p>
+                        Since releasing his 2018 debut EP <em>Major 7th Medicine</em>, Matt has become a fixture in the Vancouver indie scene, performing solo and with his band at festivals like Rifflandia and Mural Fest. His breakout single "We Went Our Own Ways" garnered over 2 million streams and expanded his reach internationally, leading to sold out tour dates in Europe.
+                    </p>
+                    <!-- <p>
+                        With a reputation for crafting immersive, heartfelt live shows, Matt continues to build momentum. His latest EP <em>SPILT</em>, featuring some of Vancouver's finest players, showcases a more expansive, self-produced sound. The lead single "what do ya miss?", mixed by Grammy-nominated Ben Kane, has already earned national and international attention.
+                    </p> -->
+                </div>
+            </article>
+        </section>
+
+        <div class="contact-info">
+            <p>Booking &amp; inquiries</p>
+            <a href="mailto:greenglassbooking@gmail.com">greenglassbooking@gmail.com</a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Green Glass Booking
+    </footer>
+
+    <script>
+      const bioToggle = document.getElementById('bioToggle');
+      const bioSection = document.getElementById('gg-info');
+
+      bioToggle.addEventListener('click', () => {
+        const isOpen = bioSection.classList.toggle('open');
+        bioToggle.setAttribute('aria-expanded', isOpen);
+      });
+    </script>
+
+</body>
+</html>

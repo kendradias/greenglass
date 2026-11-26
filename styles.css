@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('GreenGlass.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+  color: #F2EAD9;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-attachment: fixed;
+  }
+}
+
+
+/* ---------- Header ---------- */
+.site-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  background-color: rgba(21,16,13,0.5);
+  color: #F2EAD9;
+}
+
+.wordmark {
+  font-family: 'Beth Ellen';
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+}
+
+
+/* ---------- Bio Toggle----------- */
+.bio-toggle {
+  background: none;
+  border: none;
+  color: #F2EAD9;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  transition: transform 0.25s ease, background-color 0.2s ease;
+}
+
+.bio-toggle:hover {
+  background-color: rgba(242,234,217,0.15);
+}
+
+.bio-toggle[aria-expanded="true"] .bio-toggle-icon {
+  transform: rotate(45deg);
+  display: inline-block;
+}
+
+.gg-bio a {
+  color: #F2EAD9;
+  text-decoration: none;
+  border-bottom: 1px solid #C98A4B;
+}
+
+.gg-info {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.gg-info.open {
+  max-height: 600px; /* generous upper bound so content isn't clipped */
+  opacity: 1;
+}
+
+/* ---------- Artists section ---------- */
+.artists {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 24px 32px;
+}
+
+.section-label {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  font-weight:600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.artist-card {
+  background-color: rgba(21,16,13,0.72); 
+  border-radius: 4px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.artist-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  object-position: 65% center;
+  max-height: 420px;
+}
+
+.artist-bio h3 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin: 0 0 4px;
+}
+
+.artist-bio .tagline {
+  font-size: 0.9rem;
+  color: #C98A4B;
+  font-weight: 500;
+  margin: 0 0 20px;
+}
+
+.artist-bio p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.4em;
+}
+
+.artist-bio em {
+  font-style: italic;
+  color: #C98A4B;
+}
+
+/* ---------- Green Glass Section ---------- */
+
+.gg-card {
+  background-color: rgba(21,16,13,0.5);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gg-bio p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.4em;
+ 
+}
+
+/* Side-by-side layout w bigger screen*/
+@media (min-width: 768px) {
+  .artist-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .artist-photo {
+    width: 60%;
+    aspect-ratio: 4 / 3;
+    max-height: none;
+    align-self: stretch;
+  }
+  .artist-bio {
+    flex: 1;
+  }
+
+}
+
+/* ---------- Contact ---------- */
+.contact-info {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.contact-info p {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: rgba(242,234,217,0.6);
+}
+
+.contact-info a {
+  color: #F2EAD9;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-bottom: 1px solid #C98A4B;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 0.8rem;
+  color: rgba(242,234,217,0.4);
+}
